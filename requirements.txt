@@ -1,0 +1,26 @@
+datasets
+anthropic
+anthropic[bedrock]
+backoff
+botocore
+boto3
+openai
+
+# SWE-Bench
+beautifulsoup4
+chardet
+docker
+ghapi
+GitPython
+pre-commit
+python-dotenv
+rich
+unidiff
+
+# pytest
+pytest
+pytest-asyncio
+async_timeout
+
+# Configuration
+PyYAML

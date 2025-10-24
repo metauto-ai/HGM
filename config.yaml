@@ -1,0 +1,62 @@
+# This file contains all configurable parameters for the HGM system.
+
+# Language Model Configuration
+llm:
+  # Model used for self-improvement tasks
+  self_improve_llm: "gpt-5-mini"
+  
+  # Model used for downstream evaluation tasks
+  downstream_llm: "gpt-5-mini"
+  
+  # Model used for problem diagnosis
+  diagnose_llm: "gpt-5-mini"
+
+# Optimization Algorithm Parameters
+optimization:
+  # Alpha parameter for node expansion (controls exploration vs exploitation)
+  alpha: 0.6
+  
+  # Beta parameter for cooling down factor
+  beta: 1.0
+  
+  # Whether to use decreasing temperature over iterations
+  cool_down: false
+  
+  # Randomness level for evaluation task selection (0.0 = deterministic, 1.0 = fully random)
+  eval_random_level: 1.0
+  
+  # Number of pseudo descendant evaluations for tree search
+  n_pseudo_descendant_evals: 10000
+
+# Execution and Resource Management
+execution:
+  # Number of parallel workers for self-improvement attempts
+  max_workers: 20
+  
+  # Timeout for self-improvement attempts (in seconds)
+  self_improve_timeout: 3600  # 1 hour
+  
+  # Timeout for evaluation attempts (in seconds)
+  evaluation_timeout: 3600   # 1 hour
+  
+  # Maximum number of task evaluations (evolution iterations)
+  max_task_evals: 800
+
+# Evaluation Settings
+evaluation:
+  # Skip full evaluation on SWE-bench if node is top N performing
+  full_eval: false
+  
+  # Use Polyglot benchmark instead of SWE-bench
+  polyglot: false
+
+# Path Configuration
+paths:
+  # Output directory for results (if null, will be auto-generated)
+  output_dir: null
+  
+  # Directory to continue a previous run from
+  continue_from: null
+  
+  # Name of the initial agent (required)
+  initial_agent_name: "default_agent"
