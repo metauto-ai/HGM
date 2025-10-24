@@ -43,7 +43,7 @@ cd ../../
 python -m polyglot.prepare_polyglot_dataset
 ```
 
-## Running the DGM
+## Running the HGM
 ```bash
 ./run.sh
 ```
