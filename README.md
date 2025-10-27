@@ -6,7 +6,7 @@
   <img src="./misc/hgm.png" width="40%" height="auto" />
 </p> 
 
-Repository for **Huxley-Gödel Machine** (HGM), an approximation of the Gödel Machine: the theoretical optimal self-improving machine. HGM makes this concept practical with coding agents that iteratively rewrite themselves, using estimates of the promise of entire subtrees (clades) to decide which self-modifications to expand.
+Repository for **[Huxley-Gödel Machine](https://arxiv.org/abs/2510.21614)** (HGM), an approximation of the Gödel Machine: the theoretical optimal self-improving machine. HGM makes this concept practical with coding agents that iteratively rewrite themselves, using estimates of the promise of entire subtrees (clades) to decide which self-modifications to expand.
 
 ## Setup
 ```bash
