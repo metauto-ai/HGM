@@ -54,6 +54,18 @@ python -m polyglot.prepare_polyglot_dataset
 
 ## Acknowledgement
 
-The code in this repository is built upon the code from the [Darwin-Gödel Machine](https://github.com/jennyzzt/dgm/tree/main). We thank the authors for making their code publicly available.
+The code in this repository is built upon the code from the [Darwin-Gödel Machine](https://github.com/jennyzzt/dgm/tree/main). We thank the authors for making their code publicly available. The evaluation framework implementations are based on the [SWE-bench](https://github.com/swe-bench/SWE-bench) and [polyglot-benchmark](https://github.com/Aider-AI/polyglot-benchmark) repositories.
 
-The evaluation framework implementations are based on the [SWE-bench](https://github.com/swe-bench/SWE-bench) and [polyglot-benchmark](https://github.com/Aider-AI/polyglot-benchmark) repositories.
+## Reference
+
+```bash
+@misc{wang2025huxleygodelmachinehumanlevelcoding,
+      title={Huxley-G\"odel Machine: Human-Level Coding Agent Development by an Approximation of the Optimal Self-Improving Machine}, 
+      author={Wenyi Wang and Piotr Piękos and Li Nanbo and Firas Laakom and Yimeng Chen and Mateusz Ostaszewski and Mingchen Zhuge and Jürgen Schmidhuber},
+      year={2025},
+      eprint={2510.21614},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2510.21614}, 
+}
+```
