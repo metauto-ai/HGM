@@ -164,7 +164,23 @@ def eval_agent(
     if commit_id == "failed":
         return [0] * num_tasks
     global n_task_evals, total_tasks
-    metadata = load_json_file(os.path.join(output_dir, commit_id, "metadata.json"))
+    metadata_path = os.path.join(output_dir, commit_id, "metadata.json")
+    if not os.path.exists(metadata_path):
+        metadata = {
+                "run_id": commit_id,
+                "overall_performance": {
+                    "accuracy_score": 0,
+                    "total_resolved_instances": 0,
+                    "total_submitted_instances": 0,
+                    "files": [],
+                    "total_unresolved_ids": [],
+                    "total_emptypatch_ids": [],
+                    "total_resolved_ids": [],
+                    "total_submitted_ids": []
+                }
+            }
+        save_metadata(metadata, os.path.join(output_dir, commit_id))
+    metadata = load_json_file(metadata_path)
     if tasks is None:
         if commit_id == "initial":
             if len(set(init_evaluated_tasks)) >= len(set(total_tasks)):
@@ -244,7 +260,6 @@ def eval_agent(
         make_report(
             dnames,
             run_ids=[f"{commit_id}_{i}" for i in range(len(dnames))],
-            dataset_name="princeton-nlp/SWE-bench_Verified",
             output_dir=os.path.join(output_dir, commit_id),
             num_eval_procs=min(max_workers, len(tasks)),
         )

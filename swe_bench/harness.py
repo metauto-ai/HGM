@@ -66,7 +66,7 @@ def process_entry(
         tmp_currdir = os.path.abspath(os.getcwd())
         logger.info(f"Current directory: {tmp_currdir}")
         # If not in hgm directory, try to change to it
-        if "hgm" not in tmp_currdir.split("/")[-1]:
+        if "hgm" not in tmp_currdir.split("/")[-1].lower():
             try:
                 os.chdir("hgm")
                 tmp_currdir = os.path.abspath(os.getcwd())
@@ -75,7 +75,7 @@ def process_entry(
                 pass
         # If still not in hgm directory, go up until we find it
         count = 0
-        while "hgm" not in tmp_currdir.split("/")[-1]:
+        while "hgm" not in tmp_currdir.split("/")[-1].lower():
             os.chdir("..")
             tmp_currdir = os.path.abspath(os.getcwd())
             logger.info(f"Changed directory to: {tmp_currdir}")
@@ -287,7 +287,7 @@ def harness(
         num_evals: Repeated number of swe evaluations
     """
     # Load dataset
-    dataset = load_dataset("princeton-nlp/SWE-bench_Verified")
+    dataset = load_dataset("princeton-nlp/SWE-bench")
     dataset = dataset["test"]
 
     # Ensure that necessary directories exist

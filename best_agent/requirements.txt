@@ -5,7 +5,6 @@ backoff
 botocore
 boto3
 openai
-pathspec
 
 # SWE-Bench
 beautifulsoup4
@@ -22,6 +21,3 @@ unidiff
 pytest
 pytest-asyncio
 async_timeout
-
-# Configuration
-PyYAML

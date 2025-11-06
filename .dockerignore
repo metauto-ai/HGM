@@ -1,0 +1,38 @@
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+.vscode
+.env
+.ipynb
+.git
+.gitignore
+.gitattributes
+<!-- swe-bench -->
+logs/
+swe_bench/
+initial_swe/
+
+<!-- polyglot -->
+polyglot/
+initial_polyglot/
+
+<!-- outputs -->
+output_hgm/
+results/
+<!-- misc -->
+misc/
+<!-- README.md -->
+Dockerfile
+.dockerignore
+
+<!-- code outside of coding agent -->
+self_improve_step.py
+prompts/self_improvement_prompt.py
+prompts/diagnose_improvement_prompt.py
+utils/evo_utils.py
+utils/docker_utils.py
+hgm_utils.py
+hgm.py
+evaluate_agent.py
+run.sh

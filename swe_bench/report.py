@@ -106,7 +106,7 @@ python {os.path.join(root_dir, './swe_bench/SWE-bench/swebench/harness/run_evalu
 def make_report(
     dnames,
     run_ids=None,
-    dataset_name="princeton-nlp/SWE-bench_Verified",
+    dataset_name="princeton-nlp/SWE-bench",
     output_dir="./swe_bench",
     dnames_workers=None,
     num_eval_procs=5,

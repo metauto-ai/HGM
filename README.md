@@ -25,7 +25,8 @@ newgrp docker
 
 ```bash
 # Install dependencies
-conda create -n hgm
+conda create -n hgm python=3.10
+conda activate hgm
 pip install -r requirements.txt
 ```
 

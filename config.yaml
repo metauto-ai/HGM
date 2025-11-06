@@ -53,7 +53,7 @@ evaluation:
 # Path Configuration
 paths:
   # Output directory for results (if null, will be auto-generated)
-  output_dir: null
+  output_dir: "output_hgm:"
   
   # Directory to continue a previous run from
   continue_from: null
