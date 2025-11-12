@@ -85,18 +85,15 @@ def get_response_from_llm(
         new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
     elif 'gpt' in model.lower():
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
-        response = client.chat.completions.create(
+        response = client.responses.create(
             model=model,
             reasoning={"effort": "high"},
-            messages=[
+            input=[
                 {"role": "system", "content": system_message},
                 *new_msg_history,
             ],
-            n=1,
-            stop=None,
-            seed=0,
         )
-        content = response.choices[0].message.content
+        content = response.output[-1].content[0].text
         new_msg_history = new_msg_history + [{"role": "assistant", "content": content}]
     else:
         new_msg_history = msg_history + [{"role": "user", "content": msg}]
