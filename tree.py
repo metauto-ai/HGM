@@ -42,13 +42,12 @@ class Node:
                 nodes_list.extend(child.get_sub_tree(fn))
             return nodes_list
 
-    def get_pseudo_decendant_evals(self):
-        return (
-            self.utility_measures if self.num_evals < 10 else [self.mean_utility] * 10
-        )
+    def get_pseudo_decendant_evals(self, num_pseudo):
+        return self.utility_measures if self.num_evals < num_pseudo else [self.mean_utility] * num_pseudo
+        
 
     def get_decendant_evals(self, num_pseudo=10):
-        decendant_evals = [self.mean_utility] * num_pseudo
+        decendant_evals = self.get_pseudo_decendant_evals(num_pseudo)
         for decendant in self.get_sub_tree()[:-1]:
             decendant_evals += decendant.utility_measures
 
