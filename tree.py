@@ -48,7 +48,7 @@ class Node:
 
     def get_decendant_evals(self, num_pseudo=10):
         decendant_evals = self.get_pseudo_decendant_evals(num_pseudo)
-        for decendant in self.get_sub_tree()[:-1]:
+        for decendant in self.get_sub_tree()[1:]:
             decendant_evals += decendant.utility_measures
 
         return decendant_evals
