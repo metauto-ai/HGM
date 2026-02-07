@@ -10,7 +10,7 @@ Repository for **[Huxley-Gödel Machine](https://arxiv.org/abs/2510.21614)** (HG
 
 ## News
 
-* 🔥 **[02/26]** HGM gets oral presentation in ICLR 2026. Congrats!
+* 🔥 **[02/06]** Congrats! HGM gets oral presentation in ICLR 2026. See you in Brazil 🇧🇷!
 
 
 ## Setup
